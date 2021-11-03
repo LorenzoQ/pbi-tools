@@ -36,6 +36,12 @@ class Datasource:
                 'name': 'accessToken',
                 'value': token.get_token()
             }]}
+         elif token:
+            auth = 'Key'
+            credentials = {'credentialData': [{
+                'name': 'key',
+                'value': token.get_token()
+            }]}
         else:
             auth = 'Basic'
             credentials = {'credentialData': [{
