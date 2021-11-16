@@ -82,6 +82,7 @@ class Dataset:
                 print(f'*** Updating credentials for {cluster}')
                 cred = credentials.get(cluster)
                 if cluster in credentials:
+                    print("we got here")
                     datasource.update_credentials('Key', token=cred['token'])
                 else:
                     print(f'*** No credentials provided for {cluster}. Using existing credentials.')
