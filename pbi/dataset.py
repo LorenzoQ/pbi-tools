@@ -75,7 +75,10 @@ class Dataset:
             
             elif extension == 'Databricks':
                 extension_path = json.loads(connection['extensionDataSourcePath'])
+                print(f'printing credentials: {credentials}')
+                print(f'printing extension path: {extension_path}')
                 cluster = extension_path.get('httpPath')
+                print(f'printing cluster: {cluster}')
                 print(f'*** Updating credentials for {cluster}')
                 cred = credentials.get(cluster)
                 if cluster in credentials:
